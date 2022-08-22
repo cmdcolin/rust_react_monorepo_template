@@ -2,7 +2,7 @@ import './App.css'
 import { useEffect, useState } from 'react'
 
 function App() {
-  const [wasm, setWasm] = useState<any>()
+  const [wasm, setWasm] = useState<typeof import('hello-wasm')>()
   const [val, setValue] = useState('')
   useEffect(() => {
     ;(async () => {
